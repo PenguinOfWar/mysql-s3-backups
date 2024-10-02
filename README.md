@@ -1,8 +1,8 @@
 # MySQL S3 backups
 
-Forked from [railwayapp-templates/postgres-s3-backups](https://github.com/railwayapp-templates/postgres-s3-backups) with appreciation for their clean template.
-
 A simple NodeJS application to backup your MySQL database to S3 via a cron.
+
+Forked from [railwayapp-templates/postgres-s3-backups](https://github.com/railwayapp-templates/postgres-s3-backups) with appreciation for their clean template.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/BZJOmR?referralCode=kHLnFY)
 
@@ -19,6 +19,8 @@ A simple NodeJS application to backup your MySQL database to S3 via a cron.
 - `BACKUP_DATABASE_HOST` - The host of the database to backup.
 
 - `BACKUP_DATABASE_PORT` - The port of the database to backup.
+
+- `BACKUP_DATABASE_NAME` - The name of the database to backup.
 
 - `BACKUP_DATABASE_USERNAME` - The username of the database to backup.
 

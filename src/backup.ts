@@ -64,7 +64,7 @@ const dumpToFile = async (filePath: string) => {
 
   await new Promise((resolve, reject) => {
     exec(
-      `mysqldump -h ${env.BACKUP_DATABASE_HOST} -P ${env.BACKUP_DATABASE_PORT} -u${env.BACKUP_DATABASE_USERNAME} -p${env.BACKUP_DATABASE_PASSWORD} --all-databases | gzip > ${filePath}`,
+      `mariadb-dump --ssl-verify-server-cert=off -h ${env.BACKUP_DATABASE_HOST} -P ${env.BACKUP_DATABASE_PORT} -u${env.BACKUP_DATABASE_USERNAME} -p${env.BACKUP_DATABASE_PASSWORD} ${env.BACKUP_DATABASE_NAME} | gzip > ${filePath}`,
       (error, stdout, stderr) => {
         if (error) {
           reject({ error: error, stderr: stderr.trimEnd() });
@@ -125,7 +125,7 @@ export const backup = async () => {
 
   const date = new Date().toISOString();
   const timestamp = date.replace(/[:.]+/g, "-");
-  const filename = `${env.BACKUP_FILE_PREFIX}-${timestamp}.tar.gz`;
+  const filename = `${env.BACKUP_FILE_PREFIX}-${timestamp}.sql.gz`;
   const filepath = path.join(os.tmpdir(), filename);
 
   await dumpToFile(filepath);

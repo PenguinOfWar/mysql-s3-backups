@@ -11,6 +11,9 @@ export const env = envsafe({
   BACKUP_DATABASE_PORT: str({
     desc: "The port of the database to backup.",
   }),
+  BACKUP_DATABASE_NAME: str({
+    desc: "The name of the database to backup.",
+  }),
   BACKUP_DATABASE_USERNAME: str({
     desc: "The username of the database to backup.",
   }),
