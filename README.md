@@ -6,6 +6,16 @@ Forked from [railwayapp-templates/postgres-s3-backups](https://github.com/railwa
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/BZJOmR?referralCode=kHLnFY)
 
+## Overview
+
+The template uses node-cron or Railway cron, written in TypeScript to dump your MySQL or MariaDB data to a file and then upload the file to S3.
+
+## Highlights
+
+- Configurable backup schedule: By default, the cron runs at 5 AM every day but is configurable via the BACKUP_CRON_SCHEDULE environment variable.
+
+- Support for custom buckets: The script also supports using a AWS_S3_ENDPOINT environment variable to use any S3 compliant storage bucket (eg: Wasabi).
+
 ## Configuration
 
 - `AWS_ACCESS_KEY_ID` - AWS access key ID.
