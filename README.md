@@ -4,7 +4,7 @@ Forked from [railwayapp-templates/postgres-s3-backups](https://github.com/railwa
 
 A simple NodeJS application to backup your MySQL database to S3 via a cron.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/I4zGrH)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/BZJOmR?referralCode=kHLnFY)
 
 ## Configuration
 
