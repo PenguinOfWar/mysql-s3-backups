@@ -1,6 +1,6 @@
-# MySQL S3 backups
+# MySQL/MariDB S3 backups
 
-A simple NodeJS application to backup your MySQL database to S3 via a cron.
+A simple NodeJS application to backup your MySQL or MariaDB database to S3 via a cron.
 
 Forked from [railwayapp-templates/postgres-s3-backups](https://github.com/railwayapp-templates/postgres-s3-backups) with appreciation for their clean template.
 
